@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbEqual = new System.Windows.Forms.RadioButton();
+            this.rbLess = new System.Windows.Forms.RadioButton();
+            this.rbMore = new System.Windows.Forms.RadioButton();
+            this.cmbMonth = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -47,24 +53,18 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUserNo = new System.Windows.Forms.Label();
-            this.cmbMonth = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.lblSalary = new System.Windows.Forms.Label();
-            this.txtSalary = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbMore = new System.Windows.Forms.RadioButton();
-            this.rbLess = new System.Windows.Forms.RadioButton();
-            this.rbEqual = new System.Windows.Forms.RadioButton();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnlForAdmin.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.pnlForAdmin.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,68 +77,142 @@
             this.panel1.Size = new System.Drawing.Size(966, 247);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 514);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(966, 100);
-            this.panel2.TabIndex = 0;
+            this.panel4.Controls.Add(this.btnClear);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.Controls.Add(this.cmbMonth);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.txtYear);
+            this.panel4.Controls.Add(this.lblSalary);
+            this.panel4.Controls.Add(this.txtSalary);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(631, 247);
+            this.panel4.TabIndex = 0;
             // 
-            // dataGridView1
+            // btnClear
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(966, 267);
-            this.dataGridView1.TabIndex = 1;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnClear.Location = new System.Drawing.Point(149, 175);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(166, 46);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "پاک کردن";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // btnSearch
             // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnClose.Location = new System.Drawing.Point(144, 22);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(129, 66);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "بستن";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnSearch.Location = new System.Drawing.Point(321, 175);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(166, 46);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "جستجو";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // groupBox1
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnDelete.Location = new System.Drawing.Point(321, 22);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 66);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.rbEqual);
+            this.groupBox1.Controls.Add(this.rbLess);
+            this.groupBox1.Controls.Add(this.rbMore);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 108);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(293, 44);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
             // 
-            // btnUpdate
+            // rbEqual
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnUpdate.Location = new System.Drawing.Point(513, 22);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 66);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "ویرایش";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.rbEqual.AutoSize = true;
+            this.rbEqual.Location = new System.Drawing.Point(49, 13);
+            this.rbEqual.Name = "rbEqual";
+            this.rbEqual.Size = new System.Drawing.Size(58, 24);
+            this.rbEqual.TabIndex = 2;
+            this.rbEqual.TabStop = true;
+            this.rbEqual.Text = "برار";
+            this.rbEqual.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // rbLess
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnAdd.Location = new System.Drawing.Point(673, 22);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(117, 66);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "اضافه";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.rbLess.AutoSize = true;
+            this.rbLess.Location = new System.Drawing.Point(132, 14);
+            this.rbLess.Name = "rbLess";
+            this.rbLess.Size = new System.Drawing.Size(60, 24);
+            this.rbLess.TabIndex = 1;
+            this.rbLess.TabStop = true;
+            this.rbLess.Text = "کمتر";
+            this.rbLess.UseVisualStyleBackColor = true;
+            // 
+            // rbMore
+            // 
+            this.rbMore.AutoSize = true;
+            this.rbMore.Location = new System.Drawing.Point(223, 14);
+            this.rbMore.Name = "rbMore";
+            this.rbMore.Size = new System.Drawing.Size(64, 24);
+            this.rbMore.TabIndex = 0;
+            this.rbMore.TabStop = true;
+            this.rbMore.Text = "بیشتر";
+            this.rbMore.UseVisualStyleBackColor = true;
+            // 
+            // cmbMonth
+            // 
+            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.cmbMonth.FormattingEnabled = true;
+            this.cmbMonth.Location = new System.Drawing.Point(321, 69);
+            this.cmbMonth.Name = "cmbMonth";
+            this.cmbMonth.Size = new System.Drawing.Size(210, 33);
+            this.cmbMonth.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(555, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 25);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "سال";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(555, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 25);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "ماه";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtYear.Location = new System.Drawing.Point(321, 19);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(210, 30);
+            this.txtYear.TabIndex = 0;
+            // 
+            // lblSalary
+            // 
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblSalary.Location = new System.Drawing.Point(555, 124);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(66, 25);
+            this.lblSalary.TabIndex = 27;
+            this.lblSalary.Text = "دستمزد";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtSalary.Location = new System.Drawing.Point(321, 121);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(210, 30);
+            this.txtSalary.TabIndex = 2;
             // 
             // pnlForAdmin
             // 
@@ -157,23 +231,6 @@
             this.pnlForAdmin.Name = "pnlForAdmin";
             this.pnlForAdmin.Size = new System.Drawing.Size(335, 247);
             this.pnlForAdmin.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnClear);
-            this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.cmbMonth);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.txtYear);
-            this.panel4.Controls.Add(this.lblSalary);
-            this.panel4.Controls.Add(this.txtSalary);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(631, 247);
-            this.panel4.TabIndex = 0;
             // 
             // cmbPosition
             // 
@@ -267,125 +324,70 @@
             this.lblUserNo.TabIndex = 29;
             this.lblUserNo.Text = "نام کاربری";
             // 
-            // cmbMonth
+            // panel2
             // 
-            this.cmbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(321, 69);
-            this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(210, 33);
-            this.cmbMonth.TabIndex = 1;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnNew);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 514);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(966, 100);
+            this.panel2.TabIndex = 0;
             // 
-            // label1
+            // btnClose
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(555, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 25);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "سال";
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnClose.Location = new System.Drawing.Point(144, 22);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(129, 66);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "بستن";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label2
+            // btnDelete
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(555, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 25);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "ماه";
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnDelete.Location = new System.Drawing.Point(321, 22);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(132, 66);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // txtYear
+            // btnUpdate
             // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtYear.Location = new System.Drawing.Point(321, 19);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(210, 30);
-            this.txtYear.TabIndex = 0;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnUpdate.Location = new System.Drawing.Point(513, 22);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 66);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "ویرایش";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // lblSalary
+            // btnNew
             // 
-            this.lblSalary.AutoSize = true;
-            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblSalary.Location = new System.Drawing.Point(555, 124);
-            this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(66, 25);
-            this.lblSalary.TabIndex = 27;
-            this.lblSalary.Text = "دستمزد";
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNew.Location = new System.Drawing.Point(673, 22);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(117, 66);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "جدید";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // txtSalary
+            // dataGridView1
             // 
-            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtSalary.Location = new System.Drawing.Point(321, 121);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(210, 30);
-            this.txtSalary.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbEqual);
-            this.groupBox1.Controls.Add(this.rbLess);
-            this.groupBox1.Controls.Add(this.rbMore);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(293, 44);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbMore
-            // 
-            this.rbMore.AutoSize = true;
-            this.rbMore.Location = new System.Drawing.Point(223, 14);
-            this.rbMore.Name = "rbMore";
-            this.rbMore.Size = new System.Drawing.Size(64, 24);
-            this.rbMore.TabIndex = 0;
-            this.rbMore.TabStop = true;
-            this.rbMore.Text = "بیشتر";
-            this.rbMore.UseVisualStyleBackColor = true;
-            // 
-            // rbLess
-            // 
-            this.rbLess.AutoSize = true;
-            this.rbLess.Location = new System.Drawing.Point(132, 14);
-            this.rbLess.Name = "rbLess";
-            this.rbLess.Size = new System.Drawing.Size(60, 24);
-            this.rbLess.TabIndex = 1;
-            this.rbLess.TabStop = true;
-            this.rbLess.Text = "کمتر";
-            this.rbLess.UseVisualStyleBackColor = true;
-            // 
-            // rbEqual
-            // 
-            this.rbEqual.AutoSize = true;
-            this.rbEqual.Location = new System.Drawing.Point(49, 13);
-            this.rbEqual.Name = "rbEqual";
-            this.rbEqual.Size = new System.Drawing.Size(58, 24);
-            this.rbEqual.TabIndex = 2;
-            this.rbEqual.TabStop = true;
-            this.rbEqual.Text = "برار";
-            this.rbEqual.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnClear.Location = new System.Drawing.Point(149, 175);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(166, 46);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "پاک کردن";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnSearch.Location = new System.Drawing.Point(321, 175);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(166, 46);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "جستجو";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 247);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(966, 267);
+            this.dataGridView1.TabIndex = 1;
             // 
             // FrmSalaryList
             // 
@@ -400,14 +402,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "لیست دستمزدها";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnlForAdmin.ResumeLayout(false);
-            this.pnlForAdmin.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.pnlForAdmin.ResumeLayout(false);
+            this.pnlForAdmin.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,7 +424,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.ComboBox cmbDepartment;

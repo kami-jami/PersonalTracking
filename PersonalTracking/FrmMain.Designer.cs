@@ -47,6 +47,7 @@
             this.btnEmployee.TabIndex = 0;
             this.btnEmployee.Text = "کارمند";
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnTask
             // 
@@ -57,6 +58,7 @@
             this.btnTask.TabIndex = 1;
             this.btnTask.Text = "وظایف";
             this.btnTask.UseVisualStyleBackColor = true;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
             // btnSalary
             // 
@@ -67,6 +69,7 @@
             this.btnSalary.TabIndex = 2;
             this.btnSalary.Text = "حقوق";
             this.btnSalary.UseVisualStyleBackColor = true;
+            this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
             // 
             // btnPermission
             // 
@@ -75,8 +78,9 @@
             this.btnPermission.Name = "btnPermission";
             this.btnPermission.Size = new System.Drawing.Size(200, 176);
             this.btnPermission.TabIndex = 3;
-            this.btnPermission.Text = "دسترسی";
+            this.btnPermission.Text = "مجوزها";
             this.btnPermission.UseVisualStyleBackColor = true;
+            this.btnPermission.Click += new System.EventHandler(this.btnPermission_Click);
             // 
             // btnDepartment
             // 
@@ -87,6 +91,7 @@
             this.btnDepartment.TabIndex = 4;
             this.btnDepartment.Text = "بخش ها";
             this.btnDepartment.UseVisualStyleBackColor = true;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnPosition
             // 
@@ -97,6 +102,7 @@
             this.btnPosition.TabIndex = 5;
             this.btnPosition.Text = "سمت ها";
             this.btnPosition.UseVisualStyleBackColor = true;
+            this.btnPosition.Click += new System.EventHandler(this.btnPosition_Click);
             // 
             // btnLogOut
             // 
@@ -107,6 +113,7 @@
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "قطع ارتباط";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnExit
             // 
@@ -134,7 +141,9 @@
             this.Controls.Add(this.btnEmployee);
             this.Name = "FrmMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "رهگیری کارمندان";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.ResumeLayout(false);
 
         }

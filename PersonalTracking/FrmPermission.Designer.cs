@@ -178,6 +178,7 @@
             this.Controls.Add(this.lblUserNo);
             this.Name = "FrmPermission";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مجوزها";
             this.ResumeLayout(false);
             this.PerformLayout();

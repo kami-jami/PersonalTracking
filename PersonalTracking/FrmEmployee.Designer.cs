@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.lblUserNo = new System.Windows.Forms.Label();
-            this.btnCheck = new System.Windows.Forms.Button();
+            this.chAdmin = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.chAdmin = new System.Windows.Forms.CheckBox();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.lblUserNo = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -75,34 +75,15 @@
             this.panel1.Size = new System.Drawing.Size(849, 110);
             this.panel1.TabIndex = 0;
             // 
-            // txtUserNo
+            // chAdmin
             // 
-            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtUserNo.Location = new System.Drawing.Point(551, 31);
-            this.txtUserNo.Name = "txtUserNo";
-            this.txtUserNo.Size = new System.Drawing.Size(165, 30);
-            this.txtUserNo.TabIndex = 0;
-            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
-            // 
-            // lblUserNo
-            // 
-            this.lblUserNo.AutoSize = true;
-            this.lblUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblUserNo.Location = new System.Drawing.Point(724, 36);
-            this.lblUserNo.Name = "lblUserNo";
-            this.lblUserNo.Size = new System.Drawing.Size(95, 25);
-            this.lblUserNo.TabIndex = 2;
-            this.lblUserNo.Text = "نام کاربری";
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnCheck.Location = new System.Drawing.Point(412, 26);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(133, 41);
-            this.btnCheck.TabIndex = 4;
-            this.btnCheck.Text = "چک کردن";
-            this.btnCheck.UseVisualStyleBackColor = true;
+            this.chAdmin.AutoSize = true;
+            this.chAdmin.Location = new System.Drawing.Point(14, 26);
+            this.chAdmin.Name = "chAdmin";
+            this.chAdmin.Size = new System.Drawing.Size(86, 29);
+            this.chAdmin.TabIndex = 2;
+            this.chAdmin.Text = "مدیر ؟";
+            this.chAdmin.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
@@ -123,15 +104,34 @@
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "کلمه عبور";
             // 
-            // chAdmin
+            // btnCheck
             // 
-            this.chAdmin.AutoSize = true;
-            this.chAdmin.Location = new System.Drawing.Point(14, 26);
-            this.chAdmin.Name = "chAdmin";
-            this.chAdmin.Size = new System.Drawing.Size(86, 29);
-            this.chAdmin.TabIndex = 2;
-            this.chAdmin.Text = "مدیر ؟";
-            this.chAdmin.UseVisualStyleBackColor = true;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnCheck.Location = new System.Drawing.Point(412, 26);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(133, 41);
+            this.btnCheck.TabIndex = 4;
+            this.btnCheck.Text = "چک کردن";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // txtUserNo
+            // 
+            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtUserNo.Location = new System.Drawing.Point(551, 31);
+            this.txtUserNo.Name = "txtUserNo";
+            this.txtUserNo.Size = new System.Drawing.Size(165, 30);
+            this.txtUserNo.TabIndex = 0;
+            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
+            // 
+            // lblUserNo
+            // 
+            this.lblUserNo.AutoSize = true;
+            this.lblUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblUserNo.Location = new System.Drawing.Point(724, 36);
+            this.lblUserNo.Name = "lblUserNo";
+            this.lblUserNo.Size = new System.Drawing.Size(95, 25);
+            this.lblUserNo.TabIndex = 2;
+            this.lblUserNo.Text = "نام کاربری";
             // 
             // lblName
             // 
@@ -351,6 +351,7 @@
             this.Controls.Add(this.txtName);
             this.Name = "FrmEmployee";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "کارمند";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

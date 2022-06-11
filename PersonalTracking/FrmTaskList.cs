@@ -24,7 +24,10 @@ namespace PersonalTracking
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            FrmTask frm = new FrmTask();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
         }
 
         private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -35,6 +38,14 @@ namespace PersonalTracking
         private void FrmTaskList_Load(object sender, EventArgs e)
         {
             pnlForAdmin.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmTask frm = new FrmTask();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
         }
     }
 }
