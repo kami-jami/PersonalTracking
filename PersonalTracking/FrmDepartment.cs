@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace PersonalTracking
 {
@@ -20,6 +22,21 @@ namespace PersonalTracking
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtDepartment.Text.Trim() == "")
+                MessageBox.Show("لطفا نام را وارد کنید.");
+            else
+            {
+                DepartmentTBL departmentTBL = new DepartmentTBL();
+                departmentTBL.DepartmentName = txtDepartment.Text;
+                DepartmentBLL.AddDepartment(departmentTBL);
+                MessageBox.Show("بخش جدید با موفقیت اضافه شد.");
+                txtDepartment.Clear();
+            }
+            
         }
     }
 }

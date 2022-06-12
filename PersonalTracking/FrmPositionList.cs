@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using DAL.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +31,7 @@ namespace PersonalTracking
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            FillGrid();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -36,6 +40,22 @@ namespace PersonalTracking
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+        }
+
+        void FillGrid()
+        {
+            positionlist = PositionBLL.GetPosition();
+            dataGridView1.DataSource = positionlist;
+        }
+
+        List<PositionDTO> positionlist = new List<PositionDTO>();
+        private void FrmPositionList_Load(object sender, EventArgs e)
+        {
+            FillGrid();
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "سمت";
+            dataGridView1.Columns[0].HeaderText = "بخش";
         }
     }
 }

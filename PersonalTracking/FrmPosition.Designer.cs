@@ -93,6 +93,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "ذخیره";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmPosition
             // 
@@ -109,6 +110,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "سمت";
+            this.Load += new System.EventHandler(this.FrmPosition_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

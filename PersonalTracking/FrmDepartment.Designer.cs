@@ -53,6 +53,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "ذخیره";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtDepartment
             // 
