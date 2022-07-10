@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.ADO
+namespace DAL.DAO
 {
-    public class DepartmentDAO : EmployeeContext
+    public class EmployeeDAO : EmployeeContext
     {
-        public static void AddDepartment(DepartmentTBL departmentTBL)
+        public static void AddEmployee(EmployeeTBL employee)
         {
             try
             {
-                db.DepartmentTBLs.InsertOnSubmit(departmentTBL);
+                db.EmployeeTBLs.InsertOnSubmit(employee);
                 db.SubmitChanges();
             }
             catch (Exception ex)
@@ -20,12 +20,11 @@ namespace DAL.ADO
 
                 throw ex;
             }
-            
         }
 
-        public static List<DepartmentTBL> GetDepartments()
+        public static List<EmployeeTBL> GetUsers(int v)
         {
-            return db.DepartmentTBLs.ToList();
+            return db.EmployeeTBLs.Where(x => x.UserNo == v).ToList();
         }
     }
 }

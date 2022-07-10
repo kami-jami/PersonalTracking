@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.ADO
+namespace DAL.DAO
 {
     public class EmployeeContext
     {

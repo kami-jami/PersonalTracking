@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.DTO;
 
-namespace DAL.ADO
+namespace DAL.DAO
 {
     public class PositionDAO : EmployeeContext
     {
